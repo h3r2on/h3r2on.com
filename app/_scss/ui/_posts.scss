@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    $POSTS
+\*------------------------------------*/
+.posts{}
+
+.post-list{
+	@extend .block-list;
+	border-top:none;
+}
+
+.post{}
+
+.post__title{
+	margin-bottom:0;
+}
+
+.post__date{
+	display:block;
+	@include font-size(13px);
+}
+
+.post__meta{
+	padding-left:$half-spacing-unit;
+	color:#666;
+}
+
+.post__excerpt{
+	display:block;
+}

@@ -1,0 +1,27 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>H3r2on</title>
+    <link href="http://h3r2on.com/"/>
+    <link rel="self" href="http://h3r2on.com/atom.xml"/>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <id>http://h3r2on.com</id>
+    <author>
+        <name>Joel herron</name>
+        <email>joel@h3r2on.com</email>
+    </author>
+
+    {% for post in site.posts %}
+    <entry>
+        <id>http://h3r2on.com/{{ post.id }}</id>
+        <link type="text/html" rel="alternate" href="http://h3r2on.com/{{ post.url }}"/>
+        <title>{{ post.title }}</title>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        {% if post.meta %}
+            <content type="html">{{ post.meta }}</content>
+        {% endif %}
+    </entry>
+    {% endfor %}
+</feed>

@@ -1,0 +1,58 @@
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+/*
+ * Annanomous Pro
+ * By Mark Simonson http://www.ms-studio.com/
+ */
+@font-face {
+    font-family: 'AnonymousProRegular';
+    src: url('/fonts/Anonymous_Pro-webfont.eot');
+    src: url('/fonts/Anonymous_Pro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Anonymous_Pro-webfont.woff') format('woff'),
+         url('/fonts/Anonymous_Pro-webfont.ttf') format('truetype'),
+         url('/fonts/Anonymous_Pro-webfont.svg#AnonymousProRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+$code-face: 'AnonymousProRegular';
+
+/**
+ * Headings
+ */
+h1,h2,h3,h4,h5,h6{
+    font-weight: 300;
+    color:$brand-color;
+    
+    a{
+        color:$brand-color;
+    }
+}
+
+/**
+ * Links
+ */
+a{
+    color: $brand-color;
+}
+
+b, strong, a{
+    font-weight:bold;
+}
+
+
+/**
+ * modify code sections
+ */
+pre{
+    white-space:pre;
+    word-wrap:normal;
+    color:#fff;
+    background-color: #666;
+    padding: $half-spacing-unit;
+    border-radius: $brand-round;
+}
+
+pre,code,samp{
+    font-family: $code-face, Consolas, monospace;
+}

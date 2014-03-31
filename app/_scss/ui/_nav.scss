@@ -1,0 +1,134 @@
+/*------------------------------------*\
+    $NAV-HACKED
+\*------------------------------------*/
+/**
+ * Going for it <nav>
+ * e.g.:
+ * 
+   <nav class=nav>
+       <a href=#>Home</a>
+       <a href=#>About</a>
+       <a href=#>Portfolio</a>
+       <a href=#>Contact</a>
+   </nav>
+ * 
+ * Demo: jsfiddle.net/inuitcss/Vnph4
+ * 
+ */
+.nav{
+    margin-left:0;
+    @extend .cf;
+
+    > a{
+        display:inline-block;
+       *display:inline;
+        zoom:1;
+    }
+}
+
+
+/**
+ * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
+ * 
+   <nav class="nav  nav--stacked">
+      <a href=#>Home</a>
+      <a href=#>About</a>
+      <a href=#>Portfolio</a>
+      <a href=#>Contact</a>
+   </nav>
+ * 
+ */
+.nav--stacked{
+
+	  > a{
+	      display:block;
+	  }
+}
+
+
+/**
+ * `.nav--banner` extends `.nav` and centres the list, e.g.:
+ * 
+    <nav class="nav  nav--banner">
+       <a href=#>Home</a>
+       <a href=#>About</a>
+       <a href=#>Portfolio</a>
+       <a href=#>Contact</a>
+    </nav>
+ * 
+ */
+.nav--banner{
+    text-align:center;
+}
+
+
+/**
+ * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
+ * 
+   <nav class="nav  nav--block">
+       <a href=#>Home</a>
+       <a href=#>About</a>
+       <a href=#>Portfolio</a>
+       <a href=#>Contact</a>
+   </nav>
+ * 
+ */
+.nav--block{
+    line-height:1;
+    /**
+     * Remove whitespace caused by `inline-block`.
+     */
+    letter-spacing:-0.31em;
+    word-spacing:-0.43em;
+    white-space:nowrap;
+    
+    > a{
+    		letter-spacing:normal;
+    		word-spacing:normal;
+        padding:$half-spacing-unit;
+    }
+}
+
+
+/**
+ * Force a nav to occupy 100% of the available width of its parent. Extends
+ * `.nav`, e.g.:
+ * 
+   <nav class="nav  nav--fit">
+       <a href=#>Home</a>
+       <a href=#>About</a>
+       <a href=#>Portfolio</a>
+       <a href=#>Contact</a>
+   </nav>
+ * 
+ * Thanks to @pimpl for this idea!
+ */
+.nav--fit{
+    display:table;
+    width:100%;
+        
+    > a{
+    		display:table-cell;
+    }
+}
+
+
+/**
+ * Make a list of keywords. Extends `.nav`, e.g.:
+ * 
+   `<nav class="nav  nav--keywords>`
+ * 
+ */
+.nav--keywords{
+    
+    > a{
+        
+        &:after{
+            content:", ";
+        }
+         
+        &:last-child:after{
+            display:none;
+        }
+    }
+}

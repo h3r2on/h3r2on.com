@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- build:css({app,.tmp}) /css/main.css -->
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js(app) /js/head-scripts.js -->
+    <!-- Replace with a custom modernizer build for production -->
+    <script src="/_bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+	<body>
+		<header>
+			<h1>Joel Herron</h1>
+			<h2>Web &amp; Mobile Designer/Developer</h2>
+		</header>
+		
+		<nav>
+			<a href="#about">about</a>
+			<a href="#skills">skills</a>
+			<a href="#projects">projects</a>
+			<a href="#blog">blog</a>
+		</nav>
+		
+		{% include about.html %}
+
+		{% include skills.html %}
+
+		{% include projects.html %}
+
+		{{ content }}
+
+		<footer>
+			<nav class="nav nav--fit">
+				<a href="https://github.com/h3r2on"><img src="/asset/img/github-64.png"></a> 
+				<a href="https://twitter.com/h3r2on"><img src="/asset/img/twitter-64.png"></a>
+				<a href="http://www.linkedin.com/in/joelherron/"><img src="/asset/img/linkedin-64.png"></a>
+			</nav>
+			<p>&copy; {{ site.time | date: "%Y" }} Joel Herron. All rights reserved.</p>
+		</footer>
+		
+		{% include scripts.html %}
+    	{% include googleanalytics.html %}
+
+	</body>
+</html>

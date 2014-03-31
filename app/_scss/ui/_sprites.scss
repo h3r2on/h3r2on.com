@@ -1,0 +1,9 @@
+.sprite{
+	background-image: url(/asset/img/eightbit.png);
+}
+
+.sprite--h3r2on-logo{
+	height:100px;
+	width:100px;
+	@include background-size(100px 100px);
+}

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+/**
+ * 
+ * sass --watch style.scss:style.min.css --style compressed
+ * 
+ * Here we pull in some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
+
+
+/**
+ * Setup
+ */
+@import "vars";
+@import "compass/css3"; // adding Compass css3 to include css3 mixins
+@import "inuit.css/inuit";
+
+/**
+ * She’s all yours, cap’n... Begin importing your stuff here.
+ */
+
+/**
+ * extended / overwritten native inuit modules 
+ * to support <nav> navigation units
+ */
+@import "ui/nav"; 
+@import "ui/pagination";
+
+/**
+ * UI imports
+ */
+@import "ui/page";
+@import "ui/typography";
+@import "ui/page-head";
+@import "ui/site-nav";
+@import "ui/page-foot";
+@import "ui/posts";
+@import "ui/project";
+@import "ui/code";
+@import "ui/sprites";

@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    $PAGINATION-HACKED
+\*------------------------------------*/
+/**
+ * Basic pagination object, extends `.nav`.
+ * Requires some funky commenting to collapse any white-space caused by the
+ * `display:inline-block;` rules.
+ * 
+   <nav class="nav  pagination">
+       <span class=pagination__first>First</span>
+       <span class=pagination__prev>Previous</span>
+       <a href=/page/1>1</a>
+       <a href=/page/2>2</a>
+       <a class=current href=/page/3>3</a>
+       <a href=/page/4>4</a>
+       <a href=/page/5>5</a>
+       <a class=pagination__next href=/page/next>Next</a>
+       <a class=pagination__last href=/page/last>Last</a>
+   </nav>
+ * 
+ * Demo: jsfiddle.net/inuitcss/9Y6PU
+ * 
+ */
+.pagination{
+    text-align:center;
+}
+    .pagination > span{
+        padding:$base-spacing-unit / 2;
+        letter-spacing:normal;
+        word-spacing:normal;
+    }
+    .pagination > a{
+        padding:$base-spacing-unit / 2;
+        margin:-$base-spacing-unit / 2;
+    }    
+    .pagination__first a:before{
+        content:"« ";
+    }
+    .pagination__last a:after{
+        content:" »";
+    }
