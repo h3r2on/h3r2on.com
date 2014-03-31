@@ -8,10 +8,15 @@
 	border-top:none;
 }
 
-.post{}
+.post{
+	max-width: 800px;
+	margin: 0 auto;
+	padding: $base-spacing-unit;
+}
 
 .post__title{
 	margin-bottom:0;
+	color: $brand-color;
 }
 
 .post__date{

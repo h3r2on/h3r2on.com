@@ -3,9 +3,13 @@ layout: onepage
 title: Joel Herron
 ---
 
-<section class="page__blog">
-  <h2>Blog</h2>
-  {% for post in site.posts %}
-    <article><time>{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></article>
-  {% endfor %}
+<section class="page page--blog" id="blog">
+	<div class="content-wrapper">
+		<h2>Blog</h2>
+		{% for post in paginator.posts %}
+		<article><time>{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></article>
+		{% endfor %}
+
+		
+	</div>
 </section>

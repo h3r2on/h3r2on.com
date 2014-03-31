@@ -20,17 +20,18 @@
 
   </head>
   <body>
-    <header>
-        <h1>Joel Herron</h1>
-        <h2>Web &amp; Mobile Designer/Developer</h2>
+    <header class="page__header">
+        <div class="header-wrapper">
+            <h1>Joel Herron</h1>
+            <h2>Web &amp; Mobile Designer/Developer</h2>
+        </div>
     </header>
-    
-    <nav>
-        <a href="/#about">about</a>
-        <a href="/#skills">skills</a>
-        <a href="/#projects">projects</a>
+    <nav class="nav site-nav">
+        <a href="/">about</a>
         <a href="/#blog">blog</a>
+        <a href="/#projects">projects</a>
     </nav>
+
     {{ content }}
 
     {% include scripts.html %}

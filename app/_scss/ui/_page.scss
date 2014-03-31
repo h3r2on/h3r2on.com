@@ -11,14 +11,8 @@ body{
 	padding-left: 0;
 }
 
-.head-wrapper{
-	background-color:#333;
-	@extend .cf;
-	@extend .landmark;
-}
-
 .content-wrapper{
-	max-width:1100px;
+	max-width:1000px;
 	margin:0 auto;
 	padding-left:$base-spacing-unit;
 	padding-right:$base-spacing-unit;
@@ -27,5 +21,54 @@ body{
 		padding-left:$half-spacing-unit;
 		padding-right:$half-spacing-unit;
 		padding-bottom:0;
+	}
+}
+
+.page{
+	width: 100%;
+	padding: floor($base-spacing-unit * 1.5) 0;
+	@extend .cf;
+}
+
+.page__header{
+	text-align: center;
+	background-color: #000;
+	padding: floor($base-spacing-unit * 2);
+	.header-wrapper{
+		max-width: 900px;
+		margin: 0 auto;
+		border: 2px solid #fff;
+		border-radius: 4px;
+	}
+	h1{
+		font-size: $mega-size;
+	}
+
+}
+footer{
+	padding: $half-spacing-unit 0;
+	background-color: $brand-color;
+	p{
+		text-align: center;
+	}
+}
+
+.page--about{
+	background-color: $brand-color;
+	.logo-block{
+		text-align: center;
+	}
+}
+
+.page--projects{
+	background-color: #333;
+	h2{
+		color: $brand-color;
+	}
+}
+
+.page--blog{
+	h2{
+		color: $brand-color;
 	}
 }

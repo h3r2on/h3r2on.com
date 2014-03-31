@@ -1,38 +1,13 @@
 .site-nav{
 	margin-bottom:0;
-	line-height:50px;
-	@include media-query(desk){
-		line-height: 100px;
-	}
-
-
+	background-color: #333;
+	@extend .nav--block;
+	@extend .nav--banner;
 	> a{
-		margin-left:$half-spacing-unit;
-		font-size: $h4-size;
 		color:#999;
-		@include media-query(desk){
-			margin-left: $base-spacing-unit;
-		}
-
 		&:hover{
 			color:$brand-color;
 			text-decoration: none;
 		}
-	}
-}
-
-/**
- * attempt at current page navigation
- * not happy that we have to hard code the page array
- * what I'm attempting:
- * 	foreach $page in pages array 
- *		if page and nav class match
- *			set a color
- */
-
-@each $page in blog, about, projects{
-	.site--#{$page} .site-nav__#{$page}{
-		color:$brand-color;
-		cursor: text; /* fake it till you make it */
 	}
 }
