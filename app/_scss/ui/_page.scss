@@ -39,6 +39,15 @@ body{
 		margin: 0 auto;
 		border: 2px solid #fff;
 		border-radius: 4px;
+		@include media-query(portable) {
+			border:none;
+			h1{
+				@include font-size(24px);
+			}
+			h2{
+				@include font-size(20px);
+			}
+		}
 	}
 	h1{
 		font-size: $mega-size;
