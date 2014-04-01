@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 date: 2014-03-26
 layout: post
 title: 'Creating linkable tabs with Bootstrap'
@@ -20,27 +20,25 @@ At first I thought this could be a bit more challenging. But alas a quick look o
 
 The code:
 
-{% hightlight javascript %}
+{% highlight javascript %}
 var hash = document.location.hash;
 var prefix = "tab_";
 
 if(hash){
-  $.(".nav-tabs a[href=" + hash.replace(prefix, "") + "]").tab("show");
+  $(".nav-tabs a[href=" + hash.replace(prefix, "") + "]").tab("show");
 }
 
-$.(".nav-tabs a").on("shown.bs.tab", function(e){
+$(".nav-tabs a").on("shown.bs.tab", function(e){
   window.location.hash = e.target.hash.replace("#","#" + prefix);
 });
 
 {% endhighlight %}
 
-Let's tackle the first part, by grabbing `document.location.hash` we're going to get what is currently present if anything in the hash part of the URL. Given (http://h3r2on.com#tab_mytab) hash would equal "tab_mytab". Setting the prefix is also a good key this lets us break the one to one unity between the tabs ID and won't cause the page to incorrectly scroll if we don't want that behavior.
+Let's tackle the first part, by grabbing `document.location.hash` we're going to get what is currently present if anything in the hash part of the URL. Given `http://h3r2on.com#tab_mytab`, the hash would equal "tab_mytab". Setting a prefix is also a good behavior as this lets us break the one to one unity between the tabs ID and won't cause the page to incorrectly scroll if we don't want that behavior.
 
-the if statement detects if we have a hash and if after striping our prefix off it matches the url of one of the tabs it instructs Bootstap to make if visable. so far pretty straight forward stuff.
+The if statement detects if we have a hash and if after striping our prefix off it matches the url of one of the tabs it instructs Bootstap to make it visable.
 
-The second part of that script is where the url magic is. by adding a eventListener on the "shown.bs.tab" event we can now know when a tab has been displayed and on display we instruct the browser to replace whatever the current location.hash was with the appropriate prefixed hash for the target tab.
-
-Demo Link
+The second part of that script is where the url magic is. Adding an eventListener on the "shown.bs.tab" event we can do something when a tab has been displayed and in this case we instruct the browser to replace whatever the current location.hash was with the appropriate prefixed hash for the target tab. And that's it pretty simple but adds a nice user experience. [Here it is in action](/demos/bs3-linkable-tabs.html).
 
 
 Have cleaner or better solution hit me up in the comments.
