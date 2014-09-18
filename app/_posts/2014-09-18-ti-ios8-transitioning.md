@@ -30,7 +30,7 @@ So what we've done is create spaces for us to hold the current Xcode version out
 
 Now in Finder move the current Xcode.app into your Xcode5.1 directory so you should have some thing like in the image below.
 
-[Finder](/assets/xcode-move.png)
+[Finder](/img/xcode-move.png)
 
 
 You are now ready to install the new version of xcode. This will install into `/Applications/Xcode.app`.
